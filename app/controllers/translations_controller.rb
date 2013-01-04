@@ -1,6 +1,10 @@
 class TranslationsController < ApplicationController
 	def translate
-		message = params[:message]
+		message = params[:Body]
+		
+		if message.nil? || message.empty?
+			message = params[:message]
+		end
 
 		unless message.nil? || message.empty?
 			require 'mechanize'
@@ -16,7 +20,7 @@ class TranslationsController < ApplicationController
 			@result = a.page.forms.first.txtTranslation
 			@bad = @result == message
 		end
-		
+
 		respond_to do |format|
 			format.html
 			format.xml
