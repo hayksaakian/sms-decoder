@@ -1,14 +1,27 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>SmsDecoder</title>
+  <title>SMS Decoder</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-<%= yield %>
-
+	<div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-inner">
+      <div class="container">
+        <%= link_to 'SMS Decoder', root_url, :class => 'brand' %>
+        <div class="">
+          <ul class="nav pull-right">
+            <li><a href="https://github.com/hayksaakian/sms-decoder/">About</a></li>
+            <li><a href="http://twitter.com/hayksaakian">by @HaykSaakian</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+  </div>
+	<div class='container'>
+		<%= yield %>
+	</div>
 </body>
 </html>
