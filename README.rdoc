@@ -1,3 +1,8 @@
+== SMS Decoder
+
+a small rails app that turns text speak into english
+has an XML and HTML endpoint, so you can point a twilio SMS url to it and use that twilio number to translate text messages
+
 == Welcome to Rails
 
 Rails is a web-application framework that includes everything needed to create
